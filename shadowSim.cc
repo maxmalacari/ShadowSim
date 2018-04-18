@@ -201,7 +201,7 @@ double GetRandomTheta() {
 // Smear the direction according to the detector angular resolution
 void GaussFlucTangentPlane(double sigma, double theta1, double phi1, double &theta2, double &phi2){
 
-  static TRandom3 randGen(time(NULL));
+  static TRandom3 randGen(time(NULL)+2);
   
   double g1 = randGen.Uniform(0.,1.);
   double g2 = randGen.Uniform(0.,1.);
